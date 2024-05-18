@@ -7,10 +7,12 @@ class QuizGame:
         self.unattempted = 0 
         self.wronganswers = 0 
         self.totalQuestions = 10
-        self.questions_answers = pd.read_csv('QuizQuestions.csv')
+        self.questions_answers = pd.read_csv('QuizQuestions.csv') 
         self.questions = self.questions_answers.questions 
         self.answers = self.questions_answers.choices
-        self.user = input("Enter y for to proceed to quiz else n  [y/n] : ")
+        print()
+        print('\n\t************** Welcome to the Quiz on Basic Mathematics and Aptitude 2024 *******************\t\n ')
+        self.user = input("Enter y in order to proceed to the  quiz else n  [y/n] : ")
         if self.user == 'y' : 
             self.Instructions()
 
