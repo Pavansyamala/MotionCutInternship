@@ -1,0 +1,52 @@
+,questions,choices
+0,"Area of the Circle if radius of the circle is  4 and value of pi is assumed as 3.14 is  
+ A) 12.56 
+ B) 200.96 
+ C) 50.24 
+ D) 25.12",C
+1,"The No.of Intersections Points of two parallel lines is 
+ A) 0 
+ B) 1 
+ C) 2  
+ D) None of the above",A
+2,"The Number of Ways of arranging the string ""LOVE"" with or without meaning is given by 
+ A) 4 
+ B) 6 
+ C) 12 
+ D) 24",D
+3,"Arjun is the son of the daughter of shanti , Shanti is the wife of son of Ramireddy . Then the relation of shanti with Ramireddy is   
+ A) Daughter 
+ B) Daughter in Law 
+ C) Sister 
+ D) Son in Law
+  ",B
+4,"What is the Limiting Values of the expression sin(x)/x as x tends to 0 and infinity 
+ A) 0 , 1 
+ B) 1 , 0 
+ C) 0 , 0 
+ D)1 , 1",B
+5,"can you tell me the output of the python code snippet 
+	 print(eval(""3""+""3"")) 
+ A) ""6"" 
+ B) ""33"" 
+ C) 6 
+ D) 33 ",D
+6,"What is the average of the series 2 , 4 , 8 , 16 ..... upto 10 terms  
+ A) 2046 
+ B) 1022  
+ C) 510 
+ D) 4094 ",A
+7,"No.of Diogonals of a Polygon of 7 sides is 
+ A)21 
+ B)15 
+ C)14 
+ D)None of the Above ",C
+8,"The sum of the squares of the numbers 1,2,3,4,5 ,.... upto 30 is given by A) 465 
+ B) 310 
+ C) 7440 
+ D) 4960 ",D
+9,"The value of the follwing expression is given by 2+8*3-9/3+4-7*2 if * denotes the multiplication operator 
+ A) 8 
+ B) 13 
+ C) 5.34 
+ D) 17",B
