@@ -53,7 +53,7 @@ class QuizGame:
             input_thread.join(timeout=90)
 
             if input_thread.is_alive():
-                print("\nTime is up! Moving to the next question.")
+                print("\nTime is up! Moving to the next question.\n")
                 self.unattempted += 1 
                 self.score += 0 
 
