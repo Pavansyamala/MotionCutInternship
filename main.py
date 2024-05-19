@@ -36,16 +36,16 @@ class QuizGame:
             self.totalQuestions -= 1 
             question = self.questions[self.totalQuestions]
             correct_choice = self.answers[self.totalQuestions]
-            print(question)
+            print(f'Q{10-self.totalQuestions}) '+question)
             def getAnswer():
                 answer = input("Enter your Answer : ")
                 answer = answer.strip()
                 if answer == correct_choice or ord(answer)-ord(correct_choice)== 32 :
                     self.score += 1
-                    print('Correct Choice')
+                    print('Correct Choice \n')
                 else :
                     self.wronganswers += 1 
-                    print(f'Invalid Answer \n\t Correct Choice is {correct_choice}')
+                    print(f'Invalid Answer \n\t Correct Choice is {correct_choice} \n')
 
             
             input_thread = threading.Thread(target=getAnswer)
@@ -56,18 +56,18 @@ class QuizGame:
             if input_thread.is_alive():
                 print("\nTime is up! Moving to the next question.\n")
                 self.unattempted += 1 
-
-        print('Your Total Score is : ' , self.score , '/10')
-        print('Total Wrong answers attempted : ' , self.wronganswers , '/10')
-        print('Total unattempted Questions is : ' , self.unattempted , '/10')
+        print('\n ****************** Results for your test is as follows *********************** ')
+        print('      Your Total Score is            : ' , self.score , '/10')
+        print('      Total Wrong answers attempted  : ' , self.wronganswers , '/10')
+        print('      Total unattempted Questions is : ' , self.unattempted , '/10')
         self.Qualified()
 
     def Qualified(self) : 
 
         if self.score >= 6 :
-            print(f'Congratulations {self.username}! You are Qualified in you Quiz')
+            print(f'\n Congratulations {self.username}! You are Qualified in you Quiz')
         else : 
-            print(f'Sorry {self.username} in order to announce that You are not Qualified in this Quiz ! Better luck next time.')
+            print(f'\n Sorry {self.username} in order to announce that You are not Qualified in this Quiz ! Better luck next time.')
 
 
 
