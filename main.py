@@ -12,8 +12,9 @@ class QuizGame:
         self.answers = self.questions_answers.choices
         print()
         print('\n\t************** Welcome to the Quiz on Basic Mathematics and Aptitude 2024 *******************\t\n ')
-        self.user = input("Enter y in order to proceed to the  quiz else n  [y/n] : ")
-        if self.user == 'y' : 
+        self.username = input(' Enter Your Full Name : ')
+        self.user = input("\n Enter y in order to proceed to the  quiz else n  [y/n] : ")
+        if self.user == 'y' or self.user == 'Y': 
             self.Instructions()
 
     def Instructions(self):
@@ -25,7 +26,7 @@ class QuizGame:
          5. Each Question carries 4 Multiple Choices in which only 1 option is the correct choice\n'''
         print(instructions)
         understood = input("Enter y for to proceed to quiz else n  [y/n] : ")
-        if understood == 'y':
+        if understood == 'y' or understood == 'Y':
             self.StartQuiz()
     
     def StartQuiz(self):
@@ -38,13 +39,13 @@ class QuizGame:
             print(question)
             def getAnswer():
                 answer = input("Enter your Answer : ")
-                if answer == correct_choice :
+                answer = answer.strip()
+                if answer == correct_choice or ord(answer)-ord(correct_choice)== 32 :
                     self.score += 1
                     print('Correct Choice')
                 else :
-                    self.score += 0 
                     self.wronganswers += 1 
-                    print(f'Invalid Answer \n Correct Choice is {correct_choice}')
+                    print(f'Invalid Answer \n\t Correct Choice is {correct_choice}')
 
             
             input_thread = threading.Thread(target=getAnswer)
@@ -55,19 +56,18 @@ class QuizGame:
             if input_thread.is_alive():
                 print("\nTime is up! Moving to the next question.\n")
                 self.unattempted += 1 
-                self.score += 0 
 
-        print('Total Score is : ' , self.score)
-        print('Total Wrong answers is : ' , self.wronganswers)
-        print('Total unattempted Questions is : ' , self.unattempted)
+        print('Your Total Score is : ' , self.score , '/10')
+        print('Total Wrong answers attempted : ' , self.wronganswers , '/10')
+        print('Total unattempted Questions is : ' , self.unattempted , '/10')
         self.Qualified()
 
     def Qualified(self) : 
 
         if self.score >= 6 :
-            print('Congratulations ! You are Qualified in you Quiz')
+            print(f'Congratulations {self.username}! You are Qualified in you Quiz')
         else : 
-            print('Oops! You are not Qualified in')
+            print(f'Sorry {self.username} in order to announce that You are not Qualified in this Quiz ! Better luck next time.')
 
 
 
